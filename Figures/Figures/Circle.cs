@@ -1,3 +1,5 @@
+using System;
+
 namespace Figures.Figures;
 
 public class Circle : IFigure
