@@ -52,6 +52,9 @@ public class Triangle : IFigure
         if (sides.Length != 3)
             throw new ArgumentOutOfRangeException(nameof(sides), "Exactly three parameters should be provided");
 
+        if (sides.Any(x => x <= 0))
+            throw new ArgumentException("Sides of a triangle cannot be less or equal to zero", nameof(sides));
+
         _sides = new TriangleSides(sides[0], sides[1], sides[2]);
     }
 
