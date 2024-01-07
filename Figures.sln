@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figures", "Figures\Figures.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresTestApp", "FiguresTestApp\FiguresTestApp.csproj", "{C3541CC8-4815-4CD1-B9E6-C2D3FBBF96AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresUnitTests", "FiguresUnitTests\FiguresUnitTests.csproj", "{A63CD678-8965-445E-A604-ED62582D7603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{C3541CC8-4815-4CD1-B9E6-C2D3FBBF96AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3541CC8-4815-4CD1-B9E6-C2D3FBBF96AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3541CC8-4815-4CD1-B9E6-C2D3FBBF96AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63CD678-8965-445E-A604-ED62582D7603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63CD678-8965-445E-A604-ED62582D7603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63CD678-8965-445E-A604-ED62582D7603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63CD678-8965-445E-A604-ED62582D7603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
