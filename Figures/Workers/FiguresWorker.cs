@@ -4,12 +4,17 @@ namespace Figures.Workers;
 
 public class FigureWorker
 {
-    private readonly IFigure _figure;
+    private static readonly Lazy<FigureWorker> _figureWorker =
+        new Lazy<FigureWorker>(() => new FigureWorker());
 
-    public FigureWorker(IFigure figure)
+    public double GetSquare(IFigure figure) => figure.GetSquare();
+
+    public bool IsRectangular(IFigure figure)
     {
-        _figure = figure;
+        if (figure is IRectangleFigure rectangleFigure)
+            return rectangleFigure.IsRectangular();
+        throw new ArgumentException("This type of object cannot be rectangle or not", nameof(figure));
     }
 
-    public double GetSquare() => _figure.GetSquare();
+    public static FigureWorker GetInstance() => _figureWorker.Value;
 }

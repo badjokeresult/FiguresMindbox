@@ -9,11 +9,9 @@ IFigure rectangleTriangleFigure = new Triangle(3, 4, 5);
 IFigure circleFigure = new Circle(5);
 
 // Setting workers
-var nonRectangleTriangleWorker = new FigureWorker(nonRectangleTriangleFigure);
-var rectangleTriangleWorker = new FigureWorker(rectangleTriangleFigure);
-var circleWorker = new FigureWorker(circleFigure);
+var figureWorker = FigureWorker.GetInstance();
 
 // Calculating squares
-Console.WriteLine($"Non-rectangle triangle square : {nonRectangleTriangleWorker.GetSquare()}");
-Console.WriteLine($"Rectangle triangle square : {rectangleTriangleWorker.GetSquare()}");
-Console.WriteLine($"Circle square : {circleWorker.GetSquare()}");
+Console.WriteLine($"Non-rectangle triangle square : {figureWorker.GetSquare(nonRectangleTriangleFigure)}");
+Console.WriteLine($"Rectangle triangle square : {figureWorker.GetSquare(rectangleTriangleFigure)}");
+Console.WriteLine($"Circle square : {figureWorker.GetSquare(circleFigure)}");
