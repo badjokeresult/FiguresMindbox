@@ -8,6 +8,9 @@ public class Circle : IFigure
 
     public Circle(double radius)
     {
+        if (radius < 0)
+            throw new ArgumentException(nameof(radius), "Radius cannot be less than zero");
+        
         _radius = radius;
     }
 
