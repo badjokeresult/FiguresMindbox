@@ -43,7 +43,7 @@ public readonly struct TriangleSides
     public double GetSidesPerimeter() => _sideA + _sideB + _sideC;
 }
 
-public class Triangle : IFigure
+public class Triangle : IFigure, IRectangleFigure
 {
     private readonly TriangleSides _sides;
 
@@ -64,7 +64,7 @@ public class Triangle : IFigure
     {
         var hypotenuseSideName = _sides.CheckIfSideIsHypotenuse();
 
-        if (hypotenuseSideName != null)
+        if (IsRectangular())
             return GetSquareIfRectangular(hypotenuseSideName!.Value);
         return GetSquareIfNotRectangular();
     }
@@ -95,4 +95,6 @@ public class Triangle : IFigure
         
         return Math.Sqrt(powedSquare);
     }
+
+    public bool IsRectangular() => _sides.CheckIfSideIsHypotenuse() != null;
 }
